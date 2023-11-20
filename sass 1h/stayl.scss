@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100;9..40,200;9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&display=swap');
+
+$color: #696871;
+$bncolor: #FF7143;
+$chcolor: #5454D4;
+$blackcolor: #19191B;
+$acolor: #F7F7FB;
+$blueandcolor: #1D293F;
+
+@mixin btn {
+    color: white;
+    padding: 15px 48px;
+    background: $bncolor;
+    border: none;
+    border-radius: 13px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+@mixin box {
+    border: none;
+    color: $chcolor;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    font-size: 14px;
+
+}
+
+@mixin like {
+    font-size: 15px;
+    color: $color;
+    width: 350px;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+
+    font-family: 'DM Sans', sans-serif;
+}
+
+nav {
+    .container {
+        display: flex;
+        padding: 20px 0px;
+        justify-content: space-between;
+        align-items: center;
+
+        .links {
+            display: flex;
+            gap: 30px;
+
+
+
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+
+
+
+            li {
+
+
+
+
+                a {
+                    text-decoration: none;
+                    color: $color;
+                    display: flex;
+                    position: relative;
+
+
+
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -20px;
+                        left: 0px;
+                        width: 0px;
+                        height: 4px;
+                        background: $chcolor;
+                        transition: all .3s ease-in;
+                        border-radius: 4px;
+                    }
+
+                    &:hover::after {
+                        width: 100%;
+
+
+                    }
+
+                }
+
+            }
+
+        }
+
+        button {
+            @include btn();
+
+        }
+    }
+
+
+}
+
+.hero {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: none;
+
+        .hero_one {
+            padding-top: 150px;
+
+            h1 {
+                font-size: 75px;
+                color: $blackcolor;
+                width: 350px;
+                margin-bottom: 20px;
+
+
+            }
+
+            button {
+                color: white;
+                padding: 15px 48px;
+                background: $chcolor;
+                border: none;
+                border-radius: 13px;
+                font-family: 'DM Sans', sans-serif;
+                font-size: 16px;
+                cursor: pointer;
+
+            }
+
+            p {
+                @include like();
+            }
+
+
+        }
+
+        img {
+
+            margin-left: 30px;
+            margin-bottom: -30px;
+            cursor: pointer;
+        }
+
+    }
+
+    .hero_two {
+
+        img {
+
+            padding-top: 70px;
+        }
+    }
+
+
+}
+
+
+
+.cards {
+    .card {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 0px;
+        align-items: center;
+    }
+}
+
+.block {
+    display: flex;
+    gap: 300px;
+
+    .box_two {
+        padding-top: 180px;
+
+
+        h1 {
+            font-size: 50px;
+            color: $blackcolor;
+            margin-bottom: 30px
+        }
+
+        p {
+            @include like();
+            margin-bottom: 20px
+        }
+
+        button {
+            @include box();
+            margin-bottom: 30px
+        }
+
+    }
+
+    .box1_one {
+
+        img {
+            padding-top: 70px;
+        }
+    }
+}
+
+.block2 {
+    display: flex;
+    gap: 300px;
+
+    .box_two {
+        padding-top: 180px;
+
+        h1 {
+            font-size: 50px;
+            color: $blackcolor;
+            margin-bottom: 30px
+        }
+
+        p {
+            @include like();
+            margin-bottom: 20px
+        }
+
+        button {
+            @include box();
+            margin-bottom: 30px
+        }
+
+    }
+
+    .box1_one {
+
+        img {
+            padding-top: 70px;
+        }
+    }
+}
+
+.coco {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+
+    .title {
+        width: 440px;
+        text-align: center;
+        padding-top: 100px;
+
+        img {
+            width: 200px;
+            // margin-bottom: 20px;
+        }
+
+        p {
+            color: $color;
+            margin-top: 20px;
+
+        }
+    }
+}
+
+.footer_top {
+    display: flex;
+    gap: 450px;
+
+    h1 {
+        font-size: 60px;
+        width: 500px;
+        padding-top: 100px;
+
+    }
+
+
+
+}
+
+.btnclass {
+    padding-top: 200px;
+    cursor: pointer;
+
+
+    .btn {
+
+        padding: 10px 30px;
+        color: white;
+        background-color: $chcolor;
+        border: none;
+        border-radius: 13px 0px 0px 13px;
+        font-family: 'DM Sans', sans-serif;
+        cursor: pointer;
+    }
+
+    .btn2 {
+
+        padding: 10px 30px;
+        color: rgb(0, 0, 0);
+        background: $acolor;
+        border: none;
+        border-radius: 0px 13px 13px 0px;
+        font-family: 'DM Sans', sans-serif;
+        cursor: pointer;
+    }
+
+
+}
+
+.footer_bottom {
+    .stars {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding-top: 100px;
+        align-items: center;
+        padding-bottom: 100px;
+    }
+
+    .star_card {
+        background-color: $acolor;
+        padding: 40px 40px;
+        border-radius: 20px;
+        padding-top: 75px;
+        padding-bottom: 30px;
+        text-align: center;
+        height: 460px;
+
+        p {
+            color: $color;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 30px;
+            color: $blueandcolor;
+        }
+
+        button {
+            @include btn();
+            color: $chcolor;
+            background-color: white;
+            padding: 17px 80px;
+
+        }
+    }
+
+    .star_card2 {
+        background-color: $bncolor;
+        padding: 70px 40px;
+        border-radius: 16px;
+        padding-top: 90px;
+        text-align: center;
+
+        p {
+            color: white;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        button {
+            @include btn();
+            color: white;
+            background-color: rgba(0, 0, 0, 0.519);
+            padding: 17px 100px;
+
+        }
+    }
+}
+
+@media (max-width: 467px) {
+    nav {
+        .container {
+            padding: 20px 15px;
+
+            .links {
+                display: none;
+            }
+
+            button {
+                padding: 14px 37px;
+            }
+        }
+    }
+
+    .hero {
+
+        .container {
+            flex-direction: column;
+
+
+            .hero_two{
+                img {
+                    display: block;
+                    width: 440px;
+                    margin-left: 0px;
+
+                }
+            }
+
+            .hero_one {
+                padding-top: 40px;
+
+                h1 {
+                    font-size: 65px;
+                    width: 90%;
+                    margin-left: 20px;
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    width: 90%;
+                    margin: auto;
+                    margin-bottom: 20px;
+
+                }
+
+                button {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+
+    }
+
+
+
+
+
+
+
+    .cards {
+        .card {
+            padding: 20px;
+            flex-wrap: wrap;
+
+            img {
+                margin-right: 20px;
+                margin-left: 20px;
+                margin-bottom: 27px;
+
+
+            }
+
+
+        }
+    }
+
+    .block {
+        flex-direction: column;
+        gap: 0px;
+
+        .box1_one {
+            img {
+                margin: auto;
+            }
+        }
+
+        .box_two {
+            padding-top: 50px;
+
+            h1 {
+                font-size: 46px;
+                width: 90%;
+                margin: auto;
+                margin-bottom: 20px;
+            }
+
+            p {
+                width: 90%;
+                margin: auto;
+                margin-bottom: 20px;
+            }
+
+            button {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .block2 {
+        flex-direction: column-reverse;
+        gap: 0px;
+
+        .box1_one {
+            img {
+                margin: auto;
+            }
+        }
+
+        .box_two {
+            padding-top: 50px;
+
+            h1 {
+                font-size: 46px;
+                width: 90%;
+                margin: auto;
+                margin-bottom: 20px;
+            }
+
+            p {
+                width: 90%;
+                margin: auto;
+                margin-bottom: 20px;
+            }
+
+            button {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    .coco {
+        flex-direction: column;
+        gap: 0px;
+
+        .title {
+            width: 290px;
+            margin: auto;
+        }
+    }
+
+    .footer_top {
+        flex-direction: column;
+        gap: 0px;
+
+        h1 {
+            width: 90%;
+            margin: auto;
+        }
+
+        .btnclass {
+            padding-top: 50px;
+            margin-left: 20px;
+        }
+    }
+
+    .footer_bottom {
+
+        .stars {
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+
+
+    }
+}
